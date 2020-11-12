@@ -1,0 +1,40 @@
+<div class="container mt-5">
+  <p id="notice"><%= notice %></p>
+  <h1>
+    <strong><%= @cocktail.name %></strong></h1>
+    <%= link_to 'Back to all Cocktails', cocktails_path %>
+
+
+    <hr>
+    <h2>
+    Doses</h2>
+    <hr>
+    <% @cocktail.doses.each do |dose| %>
+       <div> <p> Description : <%= dose.description %></p>
+       <p> Ingredient : <%= dose.ingredient.name %> </p>
+       <%= link_to dose_path(dose), method: :delete,  data: { confirm: "Delete ?" } do %>
+       <i class="fa fa-trash" aria-hidden="true"></i>
+       <hr>
+      <% end %>
+    <% end %>
+  </div>
+
+<div class="container mt-5">
+
+  <h1>Add your dose for this cocktail </h1>
+  <%= simple_form_for [@cocktail, @dose] do |f| %>
+  <div class="form-inputs">
+  <%= f.input :description %>
+  <%= f.association :ingredient%>
+</div>
+<div class="form-actions btn btn-primary">
+  <%= f.button :submit %>
+
+</div>
+
+<%= link_to 'Back to all Cocktails', cocktails_path %>
+</div>
+<% end %>
+
+</div>
+

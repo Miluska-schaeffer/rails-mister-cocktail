@@ -1,0 +1,16 @@
+<div class="container mt-5">
+
+  <h1>Add a cocktail </h1>
+  <%= simple_form_for(@cocktail) do |f| %>
+  <div class="form-inputs">
+  <%= f.input :name %>
+
+
+</div>
+<div class="form-actions btn btn-primary">
+  <%= f.button :submit %>
+</div>
+
+<%= link_to 'Back to all Cocktails', cocktails_path %>
+</div>
+<% end %>
