@@ -3,15 +3,17 @@
   <h1>
     <strong><%= @cocktail.name %></strong></h1>
     <%= link_to 'Back to all Cocktails', cocktails_path %>
+    <hr>
+    <h2></h2>
 
 
     <hr>
-    <h2>
-    Doses</h2>
+    <h2>Doses</h2>
     <hr>
     <% @cocktail.doses.each do |dose| %>
-       <div> <p> Description : <%= dose.description %></p>
-       <p> Ingredient : <%= dose.ingredient.name %> </p>
+<!--      <p> <%= @cocktail.content %></p>
+ -->       <p> Ingredient : <%= dose.ingredient.name %> </p>
+       <div> <p> How much?: <%= dose.description %></p>
        <%= link_to dose_path(dose), method: :delete,  data: { confirm: "Delete this dose ?" } do %>
        <i class="fa fa-trash" aria-hidden="true"></i>
        <hr>
@@ -21,11 +23,12 @@
 
 <div class="container mt-5">
 
-  <h1>Add your dose for this cocktail </h1>
+  <h1>How do you mix this cocktail? </h1>
   <%= simple_form_for [@cocktail, @dose] do |f| %>
   <div class="form-inputs">
-  <%= f.input :description %>
-  <%= f.association :ingredient%>
+         <%= f.association :ingredient, label: "Add a ingredient"%>
+         <%= f.input :description, label: "How much?" %>
+
 </div>
 <div class="form-actions btn btn-primary">
   <%= f.button :submit %>
@@ -33,6 +36,41 @@
 </div>
 
 <%= link_to 'Back to all Cocktails', cocktails_path %>
+</div>
+<% end %>
+
+
+
+
+
+</div>
+
+
+
+
+
+<hr>
+<div class="container mt-5">
+<h1>Reviews </h1>  </p>
+  <% @cocktail.reviews.each do |review| %>
+  <p><%= review.content %></p>
+  <p> <%= "Rating  #{'*' * review.rating}" %> </p>
+
+  <% end %>
+  <hr>
+
+  <h1>Add a review </h1>
+  <%= simple_form_for [@cocktail, @review] do |f| %>
+  <div class="form-inputs">
+  <%= f.input :content, label: "Have you tried this mix? " %>
+  <%= f.input :rating %>
+</div>
+<div class="form-actions btn btn-primary">
+  <%= f.button :submit %>
+</div>
+
+
+
 </div>
 <% end %>
 

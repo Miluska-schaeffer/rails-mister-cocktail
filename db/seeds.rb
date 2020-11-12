@@ -12,12 +12,36 @@ puts "Cleaning database now..."
 Ingredient.destroy_all
 puts "Database clean ✅"
 
-Ingredient.create(name: "lemon")
-Ingredient.create(name: "ice")
-Ingredient.create(name: "mint leaves")
-Ingredient.create(name: "scotch")
-Ingredient.create(name: "light rum")
-Ingredient.create(name: "dark rum")
+
+
+Ingredient.create(name: "Lemon")
+Ingredient.create(name: "Crushed Ice")
+Ingredient.create(name: "Ice Cubes")
+Ingredient.create(name: "Mint Leaves")
+Ingredient.create(name: "Scotch")
+Ingredient.create(name: "Light Rum")
+Ingredient.create(name: "Dark Rum")
+Ingredient.create(name: "Cola")
+Ingredient.create(name: "Pisco")
+Ingredient.create(name: "Gin")
+Ingredient.create(name: "Wine")
+Ingredient.create(name: "Sprite")
+Ingredient.create(name: "Vodka")
+Ingredient.create(name: "Cachaca")
+Ingredient.create(name: "Coffee Shot")
+Ingredient.create(name: "Sugar")
+Ingredient.create(name: "Angostura")
+Ingredient.create(name: "Champagne")
+Ingredient.create(name: "Cranberry Juice")
+Ingredient.create(name: "Orange Juice")
+Ingredient.create(name: "Milk")
+
+
+
+
+
+
+
 
 puts "Done! Created #{Ingredient.count} ingredients."
 
