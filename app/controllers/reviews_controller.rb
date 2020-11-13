@@ -8,8 +8,6 @@ class ReviewsController < ApplicationController
     @review.save
     redirect_to cocktail_path(@cocktail)
 
-
-
   end
 
   private

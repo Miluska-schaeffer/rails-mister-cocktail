@@ -6,13 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-
-
 puts "Cleaning database now..."
 Ingredient.destroy_all
 puts "Database clean ✅"
-
-
 
 Ingredient.create(name: "Lemon")
 Ingredient.create(name: "Crushed Ice")
@@ -28,7 +24,7 @@ Ingredient.create(name: "Wine")
 Ingredient.create(name: "Sprite")
 Ingredient.create(name: "Vodka")
 Ingredient.create(name: "Cachaca")
-Ingredient.create(name: "Coffee Shot")
+Ingredient.create(name: "Coffee")
 Ingredient.create(name: "Sugar")
 Ingredient.create(name: "Angostura")
 Ingredient.create(name: "Champagne")
@@ -36,14 +32,13 @@ Ingredient.create(name: "Cranberry Juice")
 Ingredient.create(name: "Orange Juice")
 Ingredient.create(name: "Milk")
 
-
-
-
-
-
-
-
 puts "Done! Created #{Ingredient.count} ingredients."
 
-
-
+# require 'json'
+# require 'open-uri'
+# Ingredient.destroy_all
+# ingredients = JSON.parse(open("https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list").read)
+# # puts ingredients
+# ingredients["drinks"].each do |ingredient|
+#   Ingredient.create(name: ingredient["strIngredient1"])
+# end
