@@ -1,14 +1,21 @@
-<div class="container main-container mt-5">
+
+<div class="container mt-5">
+
   <h1> Cocktails List</h1>
+
   <hr>
-  <div> <% @cocktails.each do |cocktail| %>
-    <p><strong><%= cocktail.name %></strong></p>
-   <%= link_to "Check how others mix this cocktail", cocktail_path(cocktail) %>
+  <div class="cards">
+    <% @cocktails.each do |cocktail| %>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+      <p><strong><%= cocktail.name %></strong></p>
 
-
-
+      <%= link_to "mix it", cocktail_path(cocktail) %>
+    </div>
     <% end %>
-    <hr>
-    <%= link_to 'Add a cocktail', new_cocktail_path, class: "btn btn-primary" %>
-</div>
+
+
+  </div>
+
+  <hr>
+  <%= link_to 'Add a cocktail', new_cocktail_path, class: "btn btn-primary" %>
 </div>
