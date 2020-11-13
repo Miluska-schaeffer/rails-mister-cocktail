@@ -4,10 +4,11 @@
     <strong><%= @cocktail.name %></strong></h1>
     <%= link_to 'Back to all Cocktails', root_path %>
     <hr>
-    <h2></h2>
 
+    <% @cocktail.photos.each do |photo| %>
+      <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+    <% end %>
 
-    <hr>
     <h2>Doses</h2>
     <hr>
     <% @cocktail.doses.each do |dose| %>
