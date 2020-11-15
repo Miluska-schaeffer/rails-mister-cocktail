@@ -27,12 +27,14 @@ Ingredient.create(name: "Sprite")
 Ingredient.create(name: "Vodka")
 Ingredient.create(name: "Cachaca")
 Ingredient.create(name: "Coffee")
-Ingredient.create(name: "Sugar")
+Ingredient.create(name: "Brown Sugar")
 Ingredient.create(name: "Angostura")
 Ingredient.create(name: "Champagne")
 Ingredient.create(name: "Cranberry Juice")
 Ingredient.create(name: "Orange Juice")
 Ingredient.create(name: "Milk")
+Ingredient.create(name: "White Wine")
+
 
 puts "Done! Created #{Ingredient.count} ingredients."
 
