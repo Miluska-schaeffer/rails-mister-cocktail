@@ -1,61 +1,81 @@
-<div class="container mt-5">
-  <p id="notice"><%= notice %></p>
-  <h1><strong><%= @cocktail.name %></strong></h1>
-    <%= link_to 'Back to all Cocktails', root_path %>
-    <hr>
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <%= link_to "#", class: "navbar-brand" do %>
+    <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
+  <% end %>
 
-    <% @cocktail.photos.each do |photo| %>
-      <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
-    <% end %>
 
-    <h2>Doses</h2>
-    <hr>
-    <% @cocktail.doses.each do |dose| %>
-<!--      <p> <%= @cocktail.content %></p>
- -->       <p> Ingredient : <%= dose.ingredient.name %> </p>
-       <div> <p> How much?: <%= dose.description %></p>
-       <%= link_to dose_path(dose), method: :delete,  data: { confirm: "Delete this dose ?" } do %>
-       <i class="fa fa-trash" aria-hidden="true"></i>
-       <hr>
-      <% end %>
-    <% end %>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+    <%= link_to "Create cocktail", new_cocktail_path, class: "btn btn-primary" %>
+      </li>
+       <li class="nav-item">
+    <%= link_to "Back to all cocktails", root_path, class: "btn btn-primary" %>
+      </li>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+        </div>
+
+    </ul>
   </div>
+</div>
+
+
 
 <div class="container mt-5">
 
-  <h1>How do you mix this cocktail? </h1>
-  <%= simple_form_for [@cocktail, @dose] do |f| %>
-  <div class="form-inputs">
-         <%= f.association :ingredient, label: "Add a ingredient"%>
-         <%= f.input :description, label: "How much?" %>
+<!--   <p id="notice"><%= notice %></p>
+ -->
+  <h1><%= @cocktail.name %></h1>
+  <hr>
+  <p> <%= @cocktail.content %></p>
+   <% @cocktail.photos.each do |photo| %>
+  <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+  <% end %>
+  <hr>
+  <%= link_to 'Back to all Cocktails', root_path %>
+  <hr>
 
-</div>
-<div class="form-actions btn btn-primary">
+  <h2>Doses</h2>
+  <hr>
+  <% @cocktail.doses.each do |dose| %>
+  <p> Ingredient : <%= dose.ingredient.name %> </p>
+  <p> How much?: <%= dose.description %></p>
+   <%= link_to dose_path(dose), method: :delete,  data: { confirm: "Delete this dose ?" } do %>
+   <i class="fa fa-trash" aria-hidden="true"></i>
+   <hr>
+   <% end %>
+   <% end %>
+
+
+ <h3>How do you mix this cocktail? </h3>
+ <hr>
+ <%= simple_form_for [@cocktail, Dose.new] do |f| %>
+ <div class="form-inputs">
+   <%= f.association :ingredient, label: "Add a ingredient"%>
+   <%= f.input :description, label: "How much?" %>
+
+ </div>
+ <div class="form-actions btn btn-primary">
   <%= f.button :submit %>
 
 </div>
 
-<%= link_to 'Back to all Cocktails', root_path %>
-</div>
 <% end %>
-
-</div>
-
-
+<%= link_to 'Back to all Cocktails', root_path %>
 
 <hr>
-<div class="container mt-5">
-<h1>Reviews </h1>  </p>
-  <% @cocktail.reviews.each do |review| %>
-  <p><%= review.content %></p>
-  <p> <%= "Rating  #{'*' * review.rating}" %> </p>
 
-  <% end %>
-  <hr>
+<h2>Reviews </h2>
+<% @cocktail.reviews.each do |review| %>
+<p><%= review.content %></p>
+<p> <%= "Rating  #{'*' * review.rating}" %> </p>
 
-  <h1>Add your review </h1>
-  <%= simple_form_for [@cocktail, @review] do |f| %>
-  <div class="form-inputs">
+<% end %>
+<hr>
+
+<h3>Add your review </h3>
+<%= simple_form_for [@cocktail, Review.new] do |f| %>
+<div class="form-inputs">
   <%= f.input :content, label: "Have you tried this mix? " %>
   <%= f.input :rating %>
 </div>
@@ -63,9 +83,6 @@
   <%= f.button :submit %>
 </div>
 
-
-
-</div>
 <% end %>
 
 </div>

@@ -1,21 +1,32 @@
 
-<div class="container mt-5">
 
-  <h1> Cocktails List</h1>
+<div class="navbar navbar-expand-sm navbar-lewagon" >
+ <ul class="navbar-nav mr-auto">
+  <li class="nav-item active">
+    <h1><strong>Welcome to mix-ology </strong></h1>
+    <p>Life is a mixture. Go crayz drunk, mix it all!</p>
+  </li>
 
-  <hr>
-  <div class="cards">
-    <% @cocktails.each do |cocktail| %>
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-      <p><strong><%= cocktail.name %></strong></p>
-
-      <%= link_to "mix it", cocktail_path(cocktail) %>
-    </div>
-    <% end %>
-
-
+  <li class="nav-item-right">
+    <%= link_to "Create cocktail", new_cocktail_path, class: "btn btn-primary" %>
+    </li>
+  </ul>
   </div>
 
-  <hr>
-  <%= link_to 'Add a cocktail', new_cocktail_path, class: "btn btn-primary" %>
-</div>
+  <div class="container mt-5">
+
+    <h1> Cocktails List</h1>
+
+    <hr>
+    <div class="cards">
+      <% @cocktails.each do |cocktail| %>
+      <div class="card-product">
+        <img src="https://images.unsplash.com/photo-1568834663672-f39dc80eb2c7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80">
+        <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
+      </div>
+      <% end %>
+
+    </div>
+    <hr>
+    <%= link_to 'Add a cocktail', new_cocktail_path, class: "btn btn-primary" %>
+  </div>

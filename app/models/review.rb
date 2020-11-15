@@ -1,5 +1,5 @@
 class Review < ApplicationRecord
-  belongs_to :cocktail
+  belongs_to :cocktail, dependent: :destroy
 
   validates :content, presence: true
   validates :rating, presence: true

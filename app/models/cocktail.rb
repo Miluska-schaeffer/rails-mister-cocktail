@@ -6,5 +6,5 @@ class Cocktail < ApplicationRecord
 
   validates :name, presence: true, uniqueness: true, length: { in: 3..20 }
 
-  validates :content, presence: true, length: { in: 20..150 }
+  validates :content, presence: true, length: { in: 15..100 }
 end
