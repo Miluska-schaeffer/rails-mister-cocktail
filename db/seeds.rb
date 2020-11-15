@@ -10,6 +10,8 @@ puts "Cleaning database now..."
 Ingredient.destroy_all
 puts "Database clean ✅"
 
+Ingredient.create(name: "Beer")
+Ingredient.create(name: "Black Beer")
 Ingredient.create(name: "Lemon")
 Ingredient.create(name: "Crushed Ice")
 Ingredient.create(name: "Ice Cubes")
