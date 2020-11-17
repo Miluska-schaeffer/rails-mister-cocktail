@@ -5,7 +5,7 @@
   <div class="form-inputs">
   <%= f.input :name %>
   <%= f.input :content, label: "Share a short description of your cocktail" %>
-  <%= f.input :photos, as: :file, input_html: {multiple: true} %>
+  <%= f.input :photos, as: :file, input_html: {multiple: true}, label: "Add some photos" %>
 
 </div>
 <div class=" btn btn-primary">
@@ -16,6 +16,6 @@
 
 
 
-<%= link_to 'Back to all Cocktails', root_path %>
+<%= link_to 'See all Cocktails', root_path %>
 </div>
 <% end %>

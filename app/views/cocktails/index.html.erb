@@ -28,5 +28,10 @@
 
     </div>
     <hr>
-    <%= link_to 'Add a cocktail', new_cocktail_path, class: "btn btn-primary" %>
-  </div>
+<!--     <%= link_to 'Add a cocktail', new_cocktail_path, class: "btn btn-primary" %>
+ -->  </div>
+
+
+
+ <%= render 'form', cocktail: @cocktail %>
+
