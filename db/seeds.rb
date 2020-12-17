@@ -55,16 +55,13 @@ csv.each do |row|
   t = Cocktail.new
   t.name = row[:name]
   t.content = row[:content]
+  # t.category = row[:category]
 
   file = URI.open(row[:photo_url])
   t.photo.attach(io: file, filename: 'picture')
   t.save
   cocktail_array << t
 end
-
-
-
-
 
 # Cocktail.create(
 #   name: "Chilcano de Maracuya",
