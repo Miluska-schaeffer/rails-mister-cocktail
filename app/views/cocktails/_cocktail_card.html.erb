@@ -11,15 +11,15 @@
           <% end %>
           <div class="card-trip-infos">
             <div>
-          <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
-          <p> <%= cocktail.content %></p>
+              <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
+              <p> <%= cocktail.content %></p>
 
          <!--  <p> <%= cocktail.reviews.count %></p> -->
- <%= pluralize cocktail.reviews.count, "Review" %>
+              <%= pluralize cocktail.reviews.count, "Review" %>
 
-        </div>
+            </div>
           </div>
       </div>
-      <% end %>
-      <% end %>
+    <% end %>
+  <% end %>
 </div>
