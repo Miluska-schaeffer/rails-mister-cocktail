@@ -1,43 +1,23 @@
+<div class="index-container">
+  <div class="row">
+  <div class="text-center">
+      <h1> The Cocktails : Amazing treasures are yet to be discovered. Are you ready?</h1>
+      <p> Check out what others are drinking and how they are drinking it around the globe.</p>
+      <%= render 'cocktail_card' %>
 
-
-<div class="navbar navbar-expand-sm navbar-lewagon" >
- <ul class="navbar-nav mr-auto">
-  <li class="nav-item active">
-    <h1><strong>Welcome to mix-ology </strong></h1>
-    <p>Life is a mixture. Go crayz drunk, mix it all!</p>
-  </li>
-
-  <li class="nav-item-right">
-    <%= link_to "Create cocktail", new_cocktail_path, class: "btn btn-primary" %>
-    </li>
-  </ul>
   </div>
-
-  <div class="container mt-5">
-
-    <h1> Cocktails List</h1>
-
-    <hr>
-    <div class="cards">
-      <% @cocktails.each do |cocktail| %>
-      <div class="card-product">
-        <img src="https://images.unsplash.com/photo-1568834663672-f39dc80eb2c7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80">
-        <div class="card-product-infos">
-        <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
-        <hr>
-        <p> <%= cocktail.content %></p>
-      </div>
-
-
-      </div>
-      <% end %>
-
+  </div>
+</div>
+<div class="row row-2 ">
+  <div class="sharing-block">
+  <div class="col-6 container d-flex align-items-center justify-content-center">
+    <div class="">
+    <h1>Feel like sharing? </h1>
+    <p> Let everyone know what are your favorite drinks and what is the perfect preparation</p>
     </div>
-    <hr>
-<!--     <%= link_to 'Add a cocktail', new_cocktail_path, class: "btn btn-primary" %>
- -->  </div>
-
-
-
- <%= render 'form', cocktail: @cocktail %>
-
+  </div>
+  <div class="col-6 container d-flex align-items-center">
+    <%= render 'form_new_cock', cocktail: @cocktail %>
+  </div>
+  </div>
+</div>

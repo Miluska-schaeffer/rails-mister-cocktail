@@ -1,18 +1,23 @@
 .navbar-lewagon {
-  justify-content: space-between;
-  background: white;
-  height: 200px;
-}
-
-
-.navbar-lewagon h1, p {
-  color: black;
+  justify-content: center;
+  border-bottom: 1px solid #F4F7F6;
 }
 
 .navbar-lewagon .navbar-collapse {
-  flex-grow: 100;
+  flex-grow: 0;
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width: 80px;
+  border-radius: 40px 3px;
+  padding: 10px 0;
+  // box-shadow: 0 0 15px rgba(0, 0, 0, 0.12);
+}
+
+.avatar-bordered {
+  width: 50px;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  border: white 1px solid;
+  cursor: pointer;
 }

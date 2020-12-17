@@ -1,0 +1,30 @@
+.row-2{
+  background-image: radial-gradient(circle closest-side, rgba(0,0,0,0.06), rgba(0,0,0,0.7)), url("sharing-block.jpg");
+
+}
+
+.sharing-block{
+    display: flex;
+    justify-content: space-around;
+    margin: 5% 8%;
+    h1, p, {
+    color: white;
+    opacity: .8;
+    text-shadow: 2px 1px 3px rgba(0, 0, 0, 0.7);
+}
+p{
+    font-weight: lighter;
+    font-size: 25px;
+    line-height: 1.1;
+    width: 70%
+}
+
+      label {
+      color: white;
+    }
+
+  }
+  .form-control {
+    background-color: #e0d7d76e;
+    border-radius: 7px;
+  }

@@ -1,0 +1,11 @@
+<%= simple_form_for [@cocktail, Review.new] do |f| %>
+<div class="form-inputs">
+  <%= f.input :rating %>
+  <%= f.input :content, label: "How did you find this cocktail? " %>
+
+</div>
+<div class="form-actions btn btn-primary">
+  <%= f.button :submit %>
+</div>
+
+<% end %>
