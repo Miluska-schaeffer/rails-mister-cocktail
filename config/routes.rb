@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 root to: "pages#home"
   resources :cocktails, only: [:index, :show, :new, :create] do
-    resources :reviews, only: [:create]
+    resources :reviews, only: [:new, :create]
     resources :doses, only: [:create]
   end
 
