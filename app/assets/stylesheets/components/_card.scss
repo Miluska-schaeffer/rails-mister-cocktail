@@ -32,17 +32,22 @@
 }
 
 .card-trip {
-h2 {
+  h2 {
   font-size: 25px;
   font-weight: bold;
   margin: 0;
   opacity: .8;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
-h2:hover {
+  text-shadow: 0px 1px 1px rgba(74, 66, 66,0.29%);
+  a {
+      color: rgba(52, 64, 203, 0.4);
+
+  }
+  }
+  h2:hover {
  text-decoration: none;
-}
-}
-}
+  }
+ }
+
 
 
 .card-trip p {
@@ -58,6 +63,7 @@ h2:hover {
   justify-content: center;
   align-items: flex-end;
   position: relative;
+  text-align: center;
 }
 
 .card-trip-infos .card-trip-user {

@@ -10,7 +10,11 @@
 
  .cocktail-pic {
   position: relative;
- }
+  img {
+  border-radius: 20px;
+  }
+
+}
 .title {
   position: relative;
 }
@@ -30,7 +34,14 @@
     position: absolute;
     top: -20px;
     left: 1px;
-    background-color: rgba(52, 203, 176, 0.4);
+    background-color: rgba(52, 64, 203, 0.4);
     width: 200px;
     height: 200px;
+    opacity: 0.9;
 }
+
+.dose-col, .picture-col{
+  padding: 30px;
+}
+
+

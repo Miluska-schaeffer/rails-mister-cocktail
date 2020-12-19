@@ -1,11 +1,24 @@
-<div class="index-container">
-  <div class="row">
-  <div class="text-center ">
-      <h1> The Cocktails : Amazing treasures are yet to be discovered. Are you ready?</h1>
-      <p> Check out what others are drinking and how they are drinking it around the globe.</p>
-      <%= render 'cocktail_card' %>
+<div class="text-center">
+      <div class="row justify-content-center">
+        <h1> The Cocktails : Delicious treasures are ready to be discovered.</h1>
+        <h3> Check out what others mixologers are drinking and how they are drinking it around the globe.</h3>
+      </div>
+      <div class="row justify-content-center">
+       <%= simple_form_for :search, url: root_path, method: :get do |f| %>
+        <div class="search-form-control search-bar form-group ">
+          <input class="form-control string required" type="text" name="search[query]" id="search_query" />
+          <button name="button" type="submit" class="btn btn-flat">
+            <i class="fas fa-search"></i> Search
+          </button>
+        </div>
+      <% end %>
+
 
   </div>
+</div>
+<div class="index-container">
+  <div class="row">
+     <%= render 'cocktail_card' %>
   </div>
 </div>
 <div class="row row-2 ">
@@ -13,7 +26,7 @@
   <div class="col-6 container d-flex align-items-center justify-content-center">
     <div class="">
     <h1>Feel like sharing? </h1>
-    <p> Let everyone know what are your favorite drinks and what is the perfect preparation</p>
+    <p> Let everyone know how you make your favorite drink even more special.</p>
     </div>
   </div>
   <div class="col-6 container d-flex align-items-center">
