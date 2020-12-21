@@ -6,16 +6,17 @@
   display: flex;
   justify-content: space-around;
   margin: 5% 8%;
+
+
   h1, p, {
   color: white;
   opacity: .8;
   text-shadow: 2px 1px 3px rgba(0, 0, 0, 0.7);
   }
-  p{
+  p {
     font-weight: lighter;
     font-size: 25px;
     line-height: 1.1;
-    width: 70%
   }
   label {
     color: white;
@@ -42,4 +43,22 @@
   }
 }
 
+@media (max-width: 1024px) {
+  .sharing-block {
+    flex-direction: column;
+    margin: 5% auto;
+  }
+  }
 
+
+@media (max-width: 1024px) {
+  .intro-text {
+    text-align: center;
+  }
+  }
+
+  @media (max-width: 1024px) {
+   .new-cocktail {
+    justify-content: center;
+  }
+  }

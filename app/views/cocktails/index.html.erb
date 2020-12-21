@@ -12,25 +12,24 @@
           </button>
         </div>
       <% end %>
-
-
-  </div>
+     </div>
 </div>
+
 <div class="index-container">
   <div class="row">
      <%= render 'cocktail_card' %>
   </div>
 </div>
+
 <div class="row row-2 ">
-  <div class="sharing-block">
-  <div class="col-6 container d-flex align-items-center justify-content-center">
-    <div class="">
+  <div class="sharing-block container d-flex align-items-center">
+  <div class="intro-text">
     <h1>Feel like sharing? </h1>
     <p> Let everyone know how you make your favorite drink even more special.</p>
-    </div>
-  </div>
-  <div class="col-6 container d-flex align-items-center">
+ </div>
+  <div class="container new-cocktail d-flex align-items-center">
     <%= render 'form_new_cock', cocktail: @cocktail %>
   </div>
   </div>
 </div>
+

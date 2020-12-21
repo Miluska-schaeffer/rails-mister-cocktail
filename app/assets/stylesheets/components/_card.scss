@@ -5,7 +5,6 @@
   // border: 1px solid #F4F7F6;
   // box-shadow: inset 0 0 1px 0px rgba(0, 0, 0, 0.2);
 
-  margin-bottom: 20px;
 
 
 }
@@ -24,8 +23,7 @@
 
 .card-trip > .card-img {
   background-image: lineal-gradient( rgba(0,0,0,0.06), rgba(0,0,0,0.97));
-  height: 400px;
-  width: 100%;
+  height: 220px;
   object-fit: cover;
   border-radius: 0;
 
@@ -33,8 +31,7 @@
 
 .card-trip {
   h2 {
-  font-size: 25px;
-  font-weight: bold;
+  font-size: 20px;
   margin: 0;
   opacity: .8;
   text-shadow: 0px 1px 1px rgba(74, 66, 66,0.29%);
@@ -51,9 +48,9 @@
 
 
 .card-trip p {
-  font-size: 16px;
+  font-size: 14px;
   opacity: .7;
-  margin: 0;
+  margin: 4px 0;
 }
 
 
