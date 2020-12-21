@@ -6,61 +6,51 @@
   <div class="container my-5">
     <div class="row justify-content-between">
 
-  <p id="notice"><%= notice %></p>
+    <p id="notice"><%= notice %></p>
 
-      <div class="col-5 picture-col">
-        <div class="color-backdrop-2"></div>
+        <div class="col-5 picture-col">
+          <div class="color-backdrop-2"></div>
 
-        <div class="cocktail-pic">
+          <div class="cocktail-pic">
 
-           <div class="color-backdrop text-center">
-              <i class="fas fa-quote-right"></i>
-              <h1> <%= @cocktail.content %></h1>
+             <div class="color-backdrop text-center">
+                <i class="fas fa-quote-right"></i>
+                <h1> <%= @cocktail.content %></h1>
+              </div>
+              <h2> <%= @cocktail.category %> </h2>
+            <div class="color-backdrop text-center">
+                 <h3>Ingredients</h3>
+                 <% if @dose.nil? %>
+                <h2>nothing yet</h2>
+              <% else %>
+                <%= render 'doses/dose_info' %>
+              <% end %>
+                </div>
             </div>
-            <h2> <%= @cocktail.category %> </h2>
-          <div class="color-backdrop text-center">
-               <h3>Ingredients</h3>
-<% if @dose.nil? %>
-            <h2>nothing yet</h2>
-          <% else %>
-            <%= render 'doses/dose_info' %>
-          <% end %>
-            </div>
-        </div>
-        <div class="info-cock mt-3">
-            <div class="title">
+          <div class="info-cock mt-3">
+              <div class="title">
 
-         <div class="color-backdrop text-center">
-               <h3>Have you tried this drink? Give us a review </h3>
-              <%= link_to "Write a Review", new_cocktail_review_path(@cocktail) %>
-
-            </div>
-        </div>
-
-
+                 <div class="color-backdrop text-center">
+                       <h3>Have you tried this drink? Give us a review </h3>
+                      <%= link_to "Write a Review", new_cocktail_review_path(@cocktail) %>
+                  </div>
+               </div>
+          </div>
       </div>
-  </div>
 
- <div class="col-6 dose-col">
-
-
-          <h2> How do you mix it? </h2>
+       <div class="col-6 dose-col">
+        <h2> How do you mix it? </h2>
         <%= render 'doses/new' %>
-
-<!--         <div class="row">
- -->  <div>
-
-<% if @review.nil? %>
-<h2> no reviews yet</h2>
-<% else %>
-<%= render 'reviews/review_info' %>
-<% end %>
-
-
-</div>
-<!-- </div> -->
+      <!--         <div class="row">
+       -->
+         <div>
+          <% if @review.nil? %>
+          <h2> no reviews yet</h2>
+          <% else %>
+          <%= render 'reviews/review_info' %>
+          <% end %>
+        </div>
+      <!-- </div> -->
       </div>
-
-  </div>
-
+    </div>
 </div>
