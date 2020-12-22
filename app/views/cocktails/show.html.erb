@@ -3,52 +3,78 @@
   <h2> <%= @cocktail.name %> </h2>
 </div>
 
-  <div class="">
-    <div class="row justify-content-between">
+  <div class="container mt-5">
+<div class="row">
+    <div class="container d-flex mb-5 justify-content-between">
 
-        <div class="col-5 picture-col">
-          <div class="color-backdrop-2"></div>
-
-          <div class="cocktail-pic">
-
-             <div class="color-backdrop text-center">
+      <div class="cocktail-info">
+        <div class="cocktail-content mb-3 text-center">
                 <i class="fas fa-quote-right"></i>
                 <h1> <%= @cocktail.content %></h1>
-              </div>
-              <h2> <%= @cocktail.category %> </h2>
-            <div class="color-backdrop text-center">
-                 <h3>Ingredients</h3>
-                 <% if @dose.nil? %>
-                <h2>nothing yet</h2>
-              <% else %>
-                <%= render 'doses/dose_info' %>
-              <% end %>
-                </div>
-            </div>
-          <div class="info-cock mt-3">
-              <div class="title">
-
-                 <div class="color-backdrop text-center">
-                       <h3>Have you tried this drink? Give us a review </h3>
-                      <%= link_to "Write a Review", new_cocktail_review_path(@cocktail) %>
-                  </div>
-               </div>
-          </div>
+        </div>
+<!--               <h2> <%= @cocktail.category %> </h2>
+ -->     <div class="cocktail-ingredients text-center">
+           <h3>Ingredients</h3>
+           <% if @dose.nil? %>
+           <h2>nothing yet</h2>
+           <% else %>
+            <%= render 'doses/dose_info' %>
+            <% end %>
+         </div>
       </div>
 
-       <div class="col-6 dose-col">
+      <div class="mix-box">
         <h2> How do you mix it? </h2>
         <%= render 'doses/new' %>
-      <!--         <div class="row">
-       -->
-         <div>
-          <% if @review.nil? %>
+      </div>
+
+   </div>
+</div>
+<div class="row">
+
+   <div class="container d-flex mb-5 justify-content-between">
+
+<div class="reviews-info text-center">
+        <% if @review.nil? %>
           <h2> no reviews yet</h2>
           <% else %>
           <%= render 'reviews/review_info' %>
           <% end %>
-        </div>
-      <!-- </div> -->
-      </div>
-    </div>
 </div>
+
+      <div class="mix-">
+        <h3>Have you tried this drink? Give us a review </h3>
+         <%= render 'reviews/new_cocktail_review' %>
+      </div>
+
+   </div>
+
+
+</div>
+<%= link_to 'Back', :back %>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+   <!-- <div class="container mb-5 reviews-row">
+
+        <% if @review.nil? %>
+          <h2> no reviews yet</h2>
+          <% else %>
+          <%= render 'reviews/review_info' %>
+          <% end %>
+         <h3>Have you tried this drink? Give us a review </h3>
+         <%= render 'reviews/new_cocktail_review' %>
+
+
+  </div>
+ -->
