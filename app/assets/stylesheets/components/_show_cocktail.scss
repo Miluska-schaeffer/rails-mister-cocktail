@@ -40,6 +40,21 @@
     opacity: 0.9;
 }
 
+.color-backdrop-3 {
+      background-color: rgba(52, 64, 203, 0.4);
+}
+
+.text-center {
+  padding: 40px;
+  color: white;
+  h1, h3 {
+    margin-top: 18px;
+  }
+  h3 {
+    font-size: 18px;
+    }
+  }
+
 .dose-col, .picture-col{
   padding: 30px;
 }
