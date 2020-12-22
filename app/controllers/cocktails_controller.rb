@@ -1,6 +1,12 @@
 class CocktailsController < ApplicationController
   def index
-    @cocktails = Cocktail.order(created_at: :desc)
+    if params[:query].present?
+      sql_query = "name ILIKE :query OR category ILIKE :query OR content ILIKE :query"
+      @cocktails = Cocktail.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @cocktails = Cocktail.order(created_at: :desc)
+    end
+
     @cocktail = Cocktail.new
     @review = @cocktail.reviews
   end

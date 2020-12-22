@@ -1,7 +1,10 @@
-<div class="cards mt-5">
+
   <% if @cocktails.empty? %>
-  <h3> no cocktails yet 😭 </h3>
-  <% else %>
+<!--   <p id="alert"> Seems like no cocktail matches your search. Try searching another one or<%= link_to 'create your own!', new_cocktail_path %></p>
+ -->  <h3> Seems like no cocktail matches your search. Try searching another one or <%= link_to 'create your own!', new_cocktail_path %>  </h3>
+      <h6> <%= link_to 'Back to All cocktails', cocktails_path %>  </h6>
+    <% else %>
+  <div class="cards mt-5">
       <% @cocktails.each do |cocktail| %>
       <div class="card-trip">
           <% if cocktail.photo.attached? %>
