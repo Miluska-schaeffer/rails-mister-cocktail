@@ -28,53 +28,29 @@
         <%= render 'doses/new' %>
       </div>
 
-   </div>
-</div>
-<div class="row">
+    </div>
+  </div>
+  <div class="row">
 
    <div class="container d-flex mb-5 justify-content-between">
 
-<div class="reviews-info text-center">
-        <% if @review.nil? %>
-          <h2> no reviews yet</h2>
-          <% else %>
-          <%= render 'reviews/review_info' %>
-          <% end %>
-</div>
-
-      <div class="mix-">
-        <h3>Have you tried this drink? Give us a review </h3>
-         <%= render 'reviews/new_cocktail_review' %>
+      <div class="reviews-info text-center">
+          <% if @review.nil? %>
+            <h2> no reviews yet</h2>
+            <% else %>
+            <%= render 'reviews/review_info' %>
+            <% end %>
       </div>
 
-   </div>
+      <div class="mix-">
+            <h3>Have you tried this drink? Give us a review </h3>
+            <%= render 'reviews/new_cocktail_review' %>
+      </div>
 
-
-</div>
-<%= link_to 'Back', :back %>
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
-   <!-- <div class="container mb-5 reviews-row">
-
-        <% if @review.nil? %>
-          <h2> no reviews yet</h2>
-          <% else %>
-          <%= render 'reviews/review_info' %>
-          <% end %>
-         <h3>Have you tried this drink? Give us a review </h3>
-         <%= render 'reviews/new_cocktail_review' %>
-
+    </div>
 
   </div>
- -->
+      <%= link_to 'Back', :back %>
+
+</div>
+
