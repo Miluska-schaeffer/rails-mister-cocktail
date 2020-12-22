@@ -6,7 +6,7 @@
         <%= f.input :category, label: "Choose a category", as: :select, collection: Cocktail::CATEGORY %>
         <%= f.input :content, label: "Share a short description of your cocktail" %>
         <%= f.input :photo, as: :file, label: "Add a nice picture" %>
-        <%= f.button :submit, class: "btn rounded btn-lg btn-primary" %>
+        <%= f.button :submit, "Share it", class: "btn rounded btn-lg btn-primary" %>
 
     <% end %>
 
