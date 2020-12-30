@@ -1,6 +1,5 @@
 <div class="container p-5 sharing-simple-form">
 
-
       <%= simple_form_for(@cocktail) do |f| %>
         <%= f.input :name %>
         <%= f.input :category, label: "Choose a category", as: :select, collection: Cocktail::CATEGORY %>
