@@ -14,16 +14,25 @@
 
           <%= cl_image_tag cocktail.photo.key, class: "card-img"  %>
 
+
+
+
+
           <%= link_to cocktail_path(cocktail) do %>
 
              <div class="card-trip-infos">
+              <div class="card-trip-review">
+               <!--  <div> -->
+                <span><%= pluralize cocktail.reviews.count, "Review" %></span></div>
+                <!-- </div> -->
 
                <div>
-                  <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
-                  <p> <%= cocktail.content %></p>
+<!--                   <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
+ -->
+                 <h2> <%= cocktail.name %> </h2>
+                 <p> <%= cocktail.content %></p>
 
          <!--  <p> <%= cocktail.reviews.count %></p> -->
-              <%= pluralize cocktail.reviews.count, "Review" %>
 
               </div>
 
