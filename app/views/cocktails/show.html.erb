@@ -22,26 +22,15 @@
 
 <!--             <%= pluralize @cocktail.reviews.count, "Review" %>
    -->
-     <section class="reviews--info-list ">
-        <%= render 'reviews/review_info' %>
-     </section>
+       <section class="reviews--info-list ">
+          <%= render 'reviews/review_info' %>
+       </section>
 
-     <div class="new-review">
-        <hr>
-
-        <div class="new-review-wrapper">
-          <div class="item">
-            <div class="new-review-button ">
-            <h3>Have you tried this drink?
-             Leave a Review </h3>
-           </div>
-             <div class="innerText">
-               <%= render 'reviews/new_cocktail_review' %>
-            </div>
-          </div>
+       <div class="new-review">
+          <hr>
+                           <%= render 'reviews/new_cocktail_review' %>
 
        </div>
-     </div>
    </div>
 
 
