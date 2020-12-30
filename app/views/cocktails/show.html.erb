@@ -1,7 +1,7 @@
 <div class="container my-5">
    <div class="row bg-light p-5">
       <div class="col-7 cocktail--img-col">
-        <div class="">
+        <div class="cocktail-img">
             <%= cl_image_tag @cocktail.photo.key, height: 500, width: 600, crop: :fill, class:"d-block" %>
         </div>
       </div>
@@ -20,19 +20,18 @@
 
    <div class="reviews-info p-5 my-3 bg-light">
 
-<!--             <%= pluralize @cocktail.reviews.count, "Review" %>
+<!-- <%= pluralize @cocktail.reviews.count, "Review" %>
    -->
-       <section class="reviews--info-list ">
-          <%= render 'reviews/review_info' %>
-       </section>
+     <section class="reviews--info-list ">
+       <%= render 'reviews/review_info' %>
+     </section>
 
-       <div class="new-review">
-          <hr>
-                           <%= render 'reviews/new_cocktail_review' %>
+     <div class="new-review">
+        <hr>
+        <%= render 'reviews/new_cocktail_review' %>
+     </div>
 
-       </div>
    </div>
-
 
 <%= link_to 'Back to All Cocktails', cocktails_path, class: "btn btn-success" %>
 
