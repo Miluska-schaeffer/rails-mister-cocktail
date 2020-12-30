@@ -10,10 +10,12 @@
                 <%= link_to cocktail_path(cocktail) do %>
 
                    <div class="card-trip-infos">
-                    <div class="card-trip-review">
-                     <!--  <div> -->
-                      <span><%= pluralize cocktail.reviews.count, "Review" %></span></div>
-                      <!-- </div> -->
+
+                    <div class="card-trip-tags">
+
+                      <span class="cock-category"><%= cocktail.category %></span>
+                      <span class="cock-reviews"><%= pluralize cocktail.reviews.count, "review" %></span>
+                    </div>
                      <div>
       <!--            <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
        -->
