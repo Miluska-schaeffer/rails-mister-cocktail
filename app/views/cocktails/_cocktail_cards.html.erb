@@ -3,47 +3,29 @@
  -->  <h3> Seems like no cocktail matches your search. Try searching another one or <%= link_to 'create your own!', new_cocktail_path %>  </h3>
       <h6> <%= link_to 'Back to All cocktails', cocktails_path %>  </h6>
     <% else %>
+        <div class="cards mt-5">
+          <% @cocktails.each do |cocktail| %>
+            <div class="card-trip">
+                <%= cl_image_tag cocktail.photo.key, class: "card-img"  %>
+                <%= link_to cocktail_path(cocktail) do %>
 
-  <div class="cards mt-5">
-
-    <% @cocktails.each do |cocktail| %>
-
-
-      <div class="card-trip">
-
-
-          <%= cl_image_tag cocktail.photo.key, class: "card-img"  %>
-
-
-
-
-
-          <%= link_to cocktail_path(cocktail) do %>
-
-             <div class="card-trip-infos">
-              <div class="card-trip-review">
-               <!--  <div> -->
-                <span><%= pluralize cocktail.reviews.count, "Review" %></span></div>
-                <!-- </div> -->
-
-               <div>
-<!--                   <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
- -->
-                 <h2> <%= cocktail.name %> </h2>
-                 <p> <%= cocktail.content %></p>
-
-         <!--  <p> <%= cocktail.reviews.count %></p> -->
-
-              </div>
-
-
+                   <div class="card-trip-infos">
+                    <div class="card-trip-review">
+                     <!--  <div> -->
+                      <span><%= pluralize cocktail.reviews.count, "Review" %></span></div>
+                      <!-- </div> -->
+                     <div>
+      <!--            <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
+       -->
+                       <h2> <%= cocktail.name %> </h2>
+                       <p> <%= cocktail.content %></p>
+               <!--  <p> <%= cocktail.reviews.count %></p> -->
+                    </div>
+                  </div>
+                <% end %>
             </div>
           <% end %>
-
+        <% end %>
 
       </div>
-    <% end %>
-  <% end %>
-
-</div>
 
