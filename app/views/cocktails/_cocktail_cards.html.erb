@@ -1,4 +1,3 @@
-
   <% if @cocktails.empty? %>
 <!--   <p id="alert"> Seems like no cocktail matches your search. Try searching another one or<%= link_to 'create your own!', new_cocktail_path %></p>
  -->  <h3> Seems like no cocktail matches your search. Try searching another one or <%= link_to 'create your own!', new_cocktail_path %>  </h3>
@@ -7,29 +6,29 @@
 
   <div class="cards mt-5">
 
-      <% @cocktails.each do |cocktail| %>
+    <% @cocktails.each do |cocktail| %>
 
 
       <div class="card-trip">
 
 
-        <%= cl_image_tag cocktail.photo.key, class: "card-img"  %>
+          <%= cl_image_tag cocktail.photo.key, class: "card-img"  %>
 
           <%= link_to cocktail_path(cocktail) do %>
 
-          <div class="card-trip-infos">
+             <div class="card-trip-infos">
 
-            <div>
-              <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
-              <p> <%= cocktail.content %></p>
+               <div>
+                  <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
+                  <p> <%= cocktail.content %></p>
 
          <!--  <p> <%= cocktail.reviews.count %></p> -->
               <%= pluralize cocktail.reviews.count, "Review" %>
 
+              </div>
+
+
             </div>
-
-
-          </div>
           <% end %>
 
 
