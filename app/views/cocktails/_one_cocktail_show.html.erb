@@ -1,0 +1,12 @@
+ <div class="cocktail-show-card">
+    <h2><%=  @cocktail.name  %></h2>
+    <p> <%= @cocktail.content %></p>
+    <h3>Ingredients</h3>
+    <% if @dose.nil? %>
+    <h2>nothing yet</h2>
+    <% else %>
+    <%= render 'doses/dose_info' %>
+    <% end %>
+</div>
+
+

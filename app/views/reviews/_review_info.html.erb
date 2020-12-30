@@ -1,9 +1,16 @@
-<% if Review.where(id: - 1) %>
-<% @cocktail.reviews.each do |review| %>
-<p><%= review.content %></p>
-<p> <%= "Rating  #{'⭐️' * review.rating}" %> </p>
-<p><%= review.created_at.strftime('%d-%m-%Y') %></p>
-<% end %>
+<% if @review.nil? %>
+  <h2> no reviews yet</h2>
 <% else %>
-<h3> No reviews yet </h3>
+  <% if Review.where(id: - 1) %>
+    <% @cocktail.reviews.each do |review| %>
+      <h5> User at <%= review.created_at.strftime('%d-%m-%Y') %></h5>
+      <p><%= review.content %></p>
+      <p> <%= "Rating  #{'⭐️' * review.rating}" %> </p>
+    <% end %>
+  <% else %>
+    <h3> No reviews yet </h3>
+  <% end %>
 <% end %>
+
+
+

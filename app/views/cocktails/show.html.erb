@@ -1,56 +1,52 @@
-
-<div class="cock-banner" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.1)), url('<%= cl_image_path @cocktail.photo.key, height: 300, width: 400, crop: :fill %>')">
-  <h2> <%= @cocktail.name %> </h2>
-</div>
-
-  <div class="container mt-5">
-<div class="row">
-    <div class="container d-flex mb-5 justify-content-between">
-
-      <div class="cocktail-info">
-        <div class="cocktail-content mb-3 text-center">
-                <i class="fas fa-quote-right"></i>
-                <h1> <%= @cocktail.content %></h1>
+<div class="container my-5">
+   <div class="row bg-light p-5">
+      <div class="col-7 cocktail--img-col">
+        <div class="">
+            <%= cl_image_tag @cocktail.photo.key, height: 500, width: 600, crop: :fill, class:"d-block" %>
         </div>
-<!--               <h2> <%= @cocktail.category %> </h2>
- -->     <div class="cocktail-ingredients text-center">
-           <h3>Ingredients</h3>
-           <% if @dose.nil? %>
-           <h2>nothing yet</h2>
-           <% else %>
-            <%= render 'doses/dose_info' %>
-            <% end %>
-         </div>
       </div>
-
-      <div class="mix-box">
-        <h2> How do you mix it? </h2>
-        <%= render 'doses/new' %>
+      <div class="col-4 cocktail---info-col">
+        <%= render 'one_cocktail_show' %>
       </div>
+   </div>
 
-    </div>
-  </div>
-  <div class="row">
+   <div class="mixes p-5 mt-5 bg-light">
+     <%= render 'doses/new' %>
+   </div>
 
-   <div class="container d-flex mb-5 justify-content-between">
+   <section class="reviews--info-title mt-5">
+     <h3>Reviews (<%=  @cocktail.reviews.count%>)</h3>
+   </section>
 
-      <div class="reviews-info text-center">
-          <% if @review.nil? %>
-            <h2> no reviews yet</h2>
-            <% else %>
-            <%= render 'reviews/review_info' %>
-            <% end %>
-      </div>
+   <div class="reviews-info p-5 my-3 bg-light">
 
-      <div class="mix-">
-            <h3>Have you tried this drink? Give us a review </h3>
-            <%= render 'reviews/new_cocktail_review' %>
-      </div>
+<!--             <%= pluralize @cocktail.reviews.count, "Review" %>
+   -->
+     <section class="reviews--info-list ">
+        <%= render 'reviews/review_info' %>
+     </section>
 
-    </div>
+     <div class="new-review">
+        <hr>
 
-  </div>
-      <%= link_to 'Back', :back %>
+        <div class="new-review-wrapper">
+          <div class="item">
+            <div class="new-review-button ">
+            <h3>Have you tried this drink?
+             Leave a Review </h3>
+           </div>
+             <div class="innerText">
+               <%= render 'reviews/new_cocktail_review' %>
+            </div>
+          </div>
+
+       </div>
+     </div>
+   </div>
+
+
+<%= link_to 'Back to All Cocktails', cocktails_path, class: "btn btn-success" %>
 
 </div>
+
 

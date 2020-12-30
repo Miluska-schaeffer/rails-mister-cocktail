@@ -1,13 +1,15 @@
-.card-trip {
+.cocktail-show-card {
   overflow: hidden;
   background: white;
   border-radius: 4px;
-  // border: 1px solid #F4F7F6;
-  // box-shadow: inset 0 0 1px 0px rgba(0, 0, 0, 0.2);
-
+  border: 1px solid #F4F7F6;
+  box-shadow: inset 0 0 1px 0px rgba(0, 0, 0, 0.2);
 }
 
-.card-trip:hover {
+
+
+
+.card-show-card:hover {
  transform: scale(1.02, 1.02);
  a:hover {
   text-decoration: none;
@@ -15,27 +17,28 @@
 
 }
 
-.card-trip:active {
+.cocktail-show-card:active {
   transform: translate(0px, 2px);
 }
 
 
-.card-trip > .card-img {
+.cocktail-show-card > .card-img {
   background-image: lineal-gradient( rgba(0,0,0,0.06), rgba(0,0,0,0.97));
   height: 220px;
   object-fit: cover;
   border-radius: 0;
+  max-width: 200px;
 
 }
 
-.card-trip {
+.cocktail-show-card {
   h2 {
   font-size: 20px;
   margin: 0;
   opacity: .8;
   text-shadow: 0px 1px 1px rgba(74, 66, 66,0.29%);
   a {
-      color: $background-purple;
+      color: black;
 
   }
   }
@@ -46,14 +49,14 @@
 
 
 
-.card-trip p {
+.cocktail-show-card p {
   font-size: 14px;
   opacity: .7;
   margin: 4px 0;
 }
 
 
-.card-trip .card-trip-infos {
+.cocktail-show-card .cocktail-infos {
   padding: 16px;
   display: flex;
   justify-content: center;

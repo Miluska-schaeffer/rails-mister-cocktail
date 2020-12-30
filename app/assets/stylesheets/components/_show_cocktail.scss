@@ -1,70 +1,30 @@
-.info-c {
- h2 {
-  line-height: 20px;
 
-
- }}
-.info-c {
-  position: relative;
-}
-
-
-
-.title {
-  position: relative;
-}
-
-.color-backdrop{
-  h1 {
-    text-decoration: underline;
-    list-style-position: 10px;
-    text-align: center;
-  }
   .fas {
     position: center;
   }
+
+.cocktail---info-col {
+    padding-left: 2rem;
+    text-align: left;
+}
+
+.mixes, .reviews-info {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
   }
 
-// .color-backdrop-2 {
-//     position: absolute;
-//     top: -20px;
-//     left: 1px;
-//     background-color: rgba(52, 64, 203, 0.4);
-//     width: 200px;
-//     height: 200px;
-//     opacity: 0.9;
-// }
-
-.color-backdrop-3 {
-      background-color: rgba(52, 64, 203, 0.4);
-}
-
-// .text-center {
-//   padding: 40px;
-//   color: white;
-//   h1, h3 {
-//     margin-top: 18px;
-//   }
-//   h3 {
-//     font-size: 18px;
-//     }
-//   }
-
-
-
-.cocktail-content, .cocktail-ingredients{
-  border: 1px solid lightgray;
-  padding: 14px;
-  border-radius: 12px;
+.reviews-info {
+  flex-direction :column;
 }
 
 
-.mix-box, .reviews-row{
-  padding: 14px;
-  border-radius: 12px;
-  border: 1px solid lightgray;
+.reviews--info-title {
+  background-color : white;
+  margin-bottom: 20px;
 
 }
-
-
-
+.back {
+  border-radius: $border-radius-lg;
+}

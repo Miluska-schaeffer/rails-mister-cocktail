@@ -1,0 +1,17 @@
+
+
+.innerText {
+  display: none;
+}
+
+.item:hover .innerText {
+  display: block;
+}
+
+.new-review-button {
+  color: $cta-peach;
+  cursor: pointer;
+
+
+}
+
