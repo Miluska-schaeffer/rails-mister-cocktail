@@ -43,3 +43,29 @@
 
 }
 
+// What this query really means, is
+// “If [device width] is less than or equal to 992px, then do {…}”
+@media (max-width: 992px) {
+  .banner {
+    .central-text {
+      width: 40%;
+      padding: 50% auto;
+      margin: 30% 15%;
+      // text-align: center;
+    }
+    p {
+      font-size: 20px;
+    }
+    .start-button {
+      border: 1px solid $cta-peach;
+      border-radius: 15px;
+      padding: 7px 20px;
+      font-size: 18px;
+
+
+    }
+  }
+}
+
+
+
