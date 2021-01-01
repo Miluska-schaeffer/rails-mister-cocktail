@@ -1,11 +1,11 @@
 <div class="cocktail--show container my-5">
    <div class="row cocktail-row bg-light p-5 ">
-      <div class="col-7 cocktail--img-col">
+      <div class="col cocktail--img-col">
         <div class="cocktail-img">
             <%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill, class:"d-block" %>
         </div>
       </div>
-      <div class="col-4 cocktail--info-col">
+      <div class="col cocktail--info-col">
         <%= render 'one_cocktail_show' %>
         <%= link_to 'Back to All Cocktails', cocktails_path, class: "btn btn-success" %>
 
