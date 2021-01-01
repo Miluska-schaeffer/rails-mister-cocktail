@@ -3,7 +3,7 @@
     position: center;
   }
 
-.cocktail---info-col {
+.cocktail--info-col {
     padding-left: 2rem;
     text-align: left;
 }
@@ -28,3 +28,40 @@
 .back {
   border-radius: $border-radius-lg;
 }
+
+
+
+.cocktail-row {
+  display: flex;
+  // justify-content: space-between;
+}
+// media query cocktail photo row
+@media (max-width: 768px) {
+ .cocktail-row {
+ flex-direction: column;
+}
+.cocktail--info-col {
+  margin-top: 20px;
+  padding-left: 1rem;
+
+
+}
+      }
+
+@media (min-width: 768px) {
+
+.cocktail--info-col {
+  padding-left: 4rem;
+  text-align: left;
+  margin-left: -140px;
+
+}
+      }
+
+// .cocktail-row > .cocktail-img {
+//   max-width: 200px;
+//    @media (max-width: 1024px) {
+//     width: 50%;
+//   }
+// }
+
